@@ -7,9 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>Deploying to Netlify.</p>
-        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          I'm Trying :||
-        </a>
+        <p>The deployment was successful</p>
       </header>
     </div>
   );
