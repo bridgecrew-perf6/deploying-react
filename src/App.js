@@ -1,15 +1,22 @@
-import logo from "./logo.svg";
 import "./App.css";
+import Sidebar from "./components/Sidebar.js";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Products from "./pages/Products";
+import Reports from "./pages/Reports";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Deploying to Netlify.</p>
-        <p>The deployment was successful</p>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Sidebar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/reports" element={<Reports />} />
+        </Routes>
+      </Router>
+    </>
   );
 }
 
